@@ -21,16 +21,8 @@ class Alert(object):
         return "<Alert for {} on item {} with price {}>".format(self.user_email, self.item.name, self.price_limit)
 
     def send(self):
-        return requests.post(
-            AlertConstants.URL,
-            auth=("api", AlertConstants.API_KEY),
-            data={
-                "from": AlertConstants.FROM,
-                "to": self.user_email,
-                "subject": "Price limit reached for {}".format(self.item.name),
-                "text": "We've found a deal! ({}).".format(self.item.url)
-            }
-        )
+        print("enviando email")
+        return "Enviando email"
 
     @classmethod
     def find_needing_update(cls, minutes_since_update=AlertConstants.ALERT_TIMEOUT):
