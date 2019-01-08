@@ -26,4 +26,4 @@ app.register_blueprint(store_blueprint, url_prefix="/stores")
 app.register_blueprint(alert_blueprint, url_prefix="/alerts")
 
 
-#teste
+#teste1
