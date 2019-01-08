@@ -6,7 +6,7 @@ __author__ = 'jslvtr'
 
 
 class Database(object):
-    URI = os.envoron.get("MONGOLAB_URI")
+    URI = os.envoron.get("MONGODB_URI")
     DATABASE = None
 
     @staticmethod
